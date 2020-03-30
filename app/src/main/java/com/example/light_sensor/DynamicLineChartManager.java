@@ -32,7 +32,6 @@ public class DynamicLineChartManager {
         leftAxis = lineChart.getAxisLeft();
         rightAxis = lineChart.getAxisRight();
         xAxis = lineChart.getXAxis();
-        initLineChart();
         initLineDataSet(name, color);
     }
 

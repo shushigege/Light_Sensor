@@ -10,29 +10,23 @@
     android:paddingLeft="@android:dimen/notification_large_icon_width"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="260dp"
         android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/sun_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="- -"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="10sp" />
+
 
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/dynamic_chart1"
@@ -40,5 +34,146 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="金继平"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:textSize="10sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="0dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最大光照度(Lux):"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/max_data_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="80dp"
+        android:textSize="10sp" />
+
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最小光照度(Lux):"
+        android:textSize="10sp" />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/min_data_tv"
+        android:textSize="10sp"
+            android:layout_marginRight="80dp"
+        android:layout_marginLeft="0dp"
+            />
+
+        </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="0dp"
+          android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="平均光照度(Lux):"
+        android:textSize="10sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/avg_data_tv"
+        android:textSize="10sp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="80dp"/>
+
+
+      </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="jjp_plus "
+                android:id="@+id/textView1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/combined_chart1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="0dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/test_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="开始测量" />
+
+        <Button
+            android:id="@+id/save_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="保存图表" />
+    </RelativeLayout>
 </RelativeLayout>
